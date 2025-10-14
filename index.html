@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity CBD</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Font-Family cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Announcement-bar -->
+    <div class="announcement-bar-wrapper">
+        <div class="page-width">
+            <div class="announcement-bar-inner">
+                <p class="text-middle flex">Free Shipping On Orders Over $50</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <section>
+        <div class="header-section">
+            <div class="page-width">
+                <header>
+                    <div class="header header-inner-grid">
+                        <!-- Navigation -->
+                        <nav class="header-menu">
+                            <ul class="list-menu--inline">
+                                <li class="list-items">
+                                    <div class="header-menu-items text-middle"><a href="#">Learn</a></div>
+                                </li>
+                                <li class="list-items">
+                                    <div class="header-menu-items text-middle"><a href="#">Shop</a></div>
+                                </li>
+                                <li class="list-items">
+                                    <div class="header-menu-items text-middle"><a href="#">Blog</a></div>
+                                </li>
+                                <li class="list-items">
+                                    <div class="header-menu-items text-middle"><a href="#">Connect</a></div>
+                                </li>
+                                <li class="list-items">
+                                    <div class="header-menu-items text-middle"><a href="#">My
+                                            Account </a></div>
+                                </li>
+                                <li class="list-items">
+                                    <div class="header-menu-items text-middle"><a href="#">Store
+                                            Locator </a></div>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Header Logo -->
+                        <h1 class="header-heading">
+                            <div class="header-heading-logo">
+                                <div class="header-heading-logo-wrapper">
+                                    <a href="#"><img src="asstes/logo-image.png" alt="logo" width="100%"
+                                            height="100%"></a>
+                                </div>
+                            </div>
+                        </h1>
+                        <!-- Header Icons -->
+                        <div class="header-icons-wrapper">
+                            <div class="header-icons-inner">
+                                <!-- search-icon -->
+                                <div class="header-search-icon">
+                                    <span class="svg-wrapper"><a href="#"><svg width="24px" height="24px"
+                                                viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.824 16.648C13.1451 16.648 16.648 13.1451 16.648 8.824C16.648 4.50292 13.1451 1 8.824 1C4.50292 1 1 4.50292 1 8.824C1 13.1451 4.50292 16.648 8.824 16.648Z"
+                                                    stroke="white" stroke-width="1.5" />
+                                                <path d="M14.9707 14.9709L19.4407 19.4409" stroke="white"
+                                                    stroke-width="1.5" stroke-linecap="square" />
+                                            </svg>
+                                        </a></span>
+                                </div>
+                                <!-- user-icon -->
+                                <div class="header-user-icon">
+                                    <span class="svg-wrapper"><a href="#"><svg width="24px" height="24px"
+                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7C17 8.32608 16.4732 9.59785 15.5355 10.5355C14.5979 11.4732 13.3261 12 12 12C10.6739 12 9.40215 11.4732 8.46447 10.5355C7.52678 9.59785 7 8.32608 7 7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2ZM12 3.429C11.0529 3.429 10.1446 3.80523 9.47492 4.47492C8.80523 5.14461 8.429 6.05291 8.429 7C8.429 7.94709 8.80523 8.85539 9.47492 9.52508C10.1446 10.1948 11.0529 10.571 12 10.571C12.9471 10.571 13.8554 10.1948 14.5251 9.52508C15.1948 8.85539 15.571 7.94709 15.571 7C15.571 6.05291 15.1948 5.14461 14.5251 4.47492C13.8554 3.80523 12.9471 3.429 12 3.429Z"
+                                                    fill="white" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3 18.25C3 15.764 7.542 14.25 12.028 14.25C16.514 14.25 21 15.764 21 18.25V21.25H3V18.25Z"
+                                                    stroke="white" stroke-width="1.5" />
+                                                <path
+                                                    d="M12 11.25C14.3472 11.25 16.25 9.34721 16.25 7C16.25 4.65279 14.3472 2.75 12 2.75C9.65279 2.75 7.75 4.65279 7.75 7C7.75 9.34721 9.65279 11.25 12 11.25Z"
+                                                    stroke="white" stroke-width="1.5" />
+                                            </svg>
+                                        </a></span>
+                                </div>
+                                <!-- add-to-cart-icon -->
+                                <div class="header-add-to-cart-icon">
+                                    <span class="svg-wrapper"><a href="#"><svg width="24px" height="24px"
+                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_6701_2652)">
+                                                    <path
+                                                        d="M15.3207 9.5V5.321C15.3207 4.44022 14.9708 3.59551 14.348 2.9727C13.7252 2.34989 12.8805 2 11.9997 2C11.1189 2 10.2742 2.34989 9.65141 2.9727C9.0286 3.59551 8.67871 4.44022 8.67871 5.321V9.5"
+                                                        stroke="white" stroke-width="1.5" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M5.357 7.70496H18.643L19.75 21.268H4.25L5.357 7.70496Z"
+                                                        stroke="white" stroke-width="1.5" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6701_2652">
+                                                        <rect width="24" height="24" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </section>
+    <!-- Banner -->
+    <section>
+        <div class="banner-wrapper">
+            <div class="banner-inner-section">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="banner-image">
+                                <img src="asstes/banner-image.jpg" alt="banner" width="100%" height="100%" />
+                            </div>
+                            <div class="banner-content">
+                                <div class="banner-content-inner flex">
+                                    <div class="banner-heading flex">
+                                        <div class="banner-main-heading">
+                                            <h3>The Natural Way To Feel Better</h3>
+                                        </div>
+                                        <div class="banner-sub-heading">
+                                            <p class="text-style">Relax your body. Enhance your sleep. Ease your
+                                                mind.</p>
+                                        </div>
+                                    </div>
+                                    <div class="banner-content-button">
+                                        <button class="primary-button text-style">Shop Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="banner-image">
+                                <img src="asstes/banner-image.jpg" alt="banner" width="100%" height="100%" />
+                            </div>
+                            <div class="banner-content">
+                                <div class="banner-content-inner flex">
+                                    <div class="banner-heading flex">
+                                        <div class="banner-main-heading">
+                                            <h3>The Natural Way To Feel Better</h3>
+                                        </div>
+                                        <div class="banner-sub-heading">
+                                            <p class="text-style">Relax your body. Enhance your sleep. Ease your
+                                                mind.</p>
+                                        </div>
+                                    </div>
+                                    <div class="banner-content-button">
+                                        <button class="primary-button text-style">Shop Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="banner-image">
+                                <img src="asstes/banner-image.jpg" alt="banner" width="100%" height="100%" />
+                            </div>
+                            <div class="banner-content">
+                                <div class="banner-content-inner flex">
+                                    <div class="banner-heading flex">
+                                        <div class="banner-main-heading">
+                                            <h3>The Natural Way To Feel Better</h3>
+                                        </div>
+                                        <div class="banner-sub-heading">
+                                            <p class="text-style">Relax your body. Enhance your sleep. Ease your
+                                                mind.</p>
+                                        </div>
+                                    </div>
+                                    <div class="banner-content-button">
+                                        <button class="primary-button text-style">Shop Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- icons-with-text -->
+    <section>
+        <div class="icons-section-wrapper">
+            <div class="page-width">
+                <div class="icons-with-text-inner">
+                    <ul class="grid-col-6-desktop grid">
+                        <li class="grid-items">
+                            <div class="icons-image">
+                                <img src="asstes/Gluten & Allergan free.png" alt="Gluten & Allergan free">
+                            </div>
+                            <div class="icons-text">
+                                <h6>Gluten & Allergan free</h6>
+                            </div>
+                        </li>
+                        <li class="grid-items">
+                            <div class="icons-image">
+                                <img src="asstes/Lab Tested.png" alt="Lab Tested">
+                            </div>
+                            <div class="icons-text">
+                                <h6>Lab Tested</h6>
+                            </div>
+                        </li>
+                        <li class="grid-items">
+                            <div class="icons-image">
+                                <img src="asstes/Non GMO.png" alt="Non GMO">
+                            </div>
+                            <div class="icons-text">
+                                <h6>Non GMO</h6>
+                            </div>
+                        </li>
+                        <li class="grid-items">
+                            <div class="icons-image">
+                                <img src="asstes/Organic.png" alt="Organic">
+                            </div>
+                            <div class="icons-text">
+                                <h6>Organic</h6>
+                            </div>
+                        </li>
+                        <li class="grid-items">
+                            <div class="icons-image">
+                                <img src="asstes/Eco - Friendly.png" alt="Eco - Friendly">
+                            </div>
+                            <div class="icons-text">
+                                <h6>Eco - Friendly</h6>
+                            </div>
+                        </li>
+                        <li class="grid-items">
+                            <div class="icons-image">
+                                <img src="asstes/Pet Friendly.png" alt="Pet Friendly">
+                            </div>
+                            <div class="icons-text">
+                                <h6>Pet Friendly</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

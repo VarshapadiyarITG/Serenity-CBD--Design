@@ -1,0 +1,311 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "NunitoSans";
+    src: url("../asstes/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf");
+}
+
+@font-face {
+    font-family: "Americana Font";
+    src: url("/asstes/Americana Font Regular/Americana Font Regular.otf");
+}
+
+body {
+    font-family: var(--font-family-body);
+}
+
+/* page-width */
+.page-width {
+    padding: 0px 130px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+}
+
+/* anchor-tag */
+a {
+    display: inline-block;
+    color: inherit;
+}
+
+/* grid */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-col-6-desktop .grid-items {
+    max-width: calc(16% - 0px);
+    width: calc(16% - 0px);
+}
+
+.grid-col-4-desktop .grid-items {
+    max-width: calc(25% - 20px);
+    width: calc(25% - 20px);
+}
+
+.grid-col-3-desktop .grid-items {
+    max-width: calc(33.3% - 20px);
+    width: calc(33% - 20px);
+}
+
+.grid-col-2-desktop .grid-items {
+    max-width: calc(50% - 20px);
+    width: calc(50% - 20px);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-middle {
+    font-family: 'NunitoSans';
+    font-weight: var(--font-weight-body);
+    font-style: var(--font-style-body);
+    font-size: 14px;
+    line-height: var(--line-height);
+    letter-spacing: 0;
+    text-align: center;
+    color: var(--text-color-body);
+}
+
+/* basic-root*/
+/* heading */
+:root {
+    --font-weight-heading: 600;
+    --line-height-heading: 1.2em;
+    --font-family-heading: 'Americana Font';
+    --line-height: 100%;
+}
+
+/* body */
+:root {
+    --font-weight-body: 400;
+    --font-style-body: Regular;
+    --line-height-body: 1.8em;
+    --letter-spacing-body: 0;
+    --font-family-body: "NunitoSans";
+    --text-color-body: rgba(255, 255, 255, 1);
+}
+
+/* background-color */
+:root {
+    --background-color-primary: rgba(38, 163, 219, 1);
+    --background-color-secondary: rgba(233, 246, 251, 1);
+    --font-weight-btn: 500;
+    --font-style-btn: medium;
+}
+
+/* heading */
+h5,
+.h5 {
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-btn);
+    font-style: var(--font-style-body);
+    font-size: 20px;
+    line-height: var(--line-height);
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 0;
+}
+
+h3,
+.h3 {
+    font-family: 'Americana Font';
+    font-weight: var(--font-weight-btn);
+    font-style: var(--font-style-body);
+    font-size: 36px;
+}
+
+h6,
+.h6 {
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-btn);
+    font-style: var(--font-style-body);
+    font-size: 18px;
+    line-height: var(--line-height-body);
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.text-style {
+    font-size: 16px;
+    font-family: var(--font-body-family);
+    font-style: var(--font-style);
+    line-height: 26px;
+    letter-spacing: var(--letter-spacing-body);
+    font-weight: var(--font-weight-body);
+    color: var(--text-color-body);
+}
+
+.primary-button {
+    font-family: var(--font-body-family);
+    font-weight: var(--font-weight-btn);
+    font-style: var(--font-style-btn);
+    font-size: 16px;
+    line-height: var(--line-height);
+    letter-spacing: 0;
+    text-transform: capitalize;
+    width: 148px;
+    height: 48px;
+    opacity: 1;
+    /* padding: 13px 36px; */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--background-color-primary);
+}
+
+.button-underline {
+    font-family: var(--font-body-family);
+    font-weight: var(--font-weight-btn);
+    font-style: var(--font-style-btn);
+    font-size: 16px;
+    line-height: var(--line-height);
+    letter-spacing: 0;
+    text-transform: capitalize;
+    width: 76px;
+    height: 22px;
+    opacity: 1;
+    border-bottom: 1px solid;
+}
+
+/* Announcement-bar */
+.announcement-bar-wrapper {
+    background-color: var(--background-color-primary);
+}
+
+.announcement-bar-inner {
+    padding: 10px;
+    position: relative;
+}
+
+/* header */
+li {
+    list-style: none;
+}
+
+.header-section {
+    position: relative;
+    z-index: 10;
+    top: 15px;
+    background: transparent;
+}
+
+.header-heading-logo-wrapper {
+    aspect-ratio: 2.06/1;
+    max-width: 103px;
+    max-height: 50px;
+}
+
+ul.list-menu--inline {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.header-icons-inner {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-heading-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header.header-inner-grid {
+    display: grid;
+    grid-template-columns: 45% 20% 35%;
+}
+
+.header-icons-wrapper {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+nav.header-menu {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/* Banner*/
+.banner-content {
+    position: absolute;
+    top: 258px;
+    left: 130px;
+}
+
+.banner-main-heading {
+    max-width: 425px;
+}
+
+.banner-inner-section {
+    position: relative;
+    top: -50px;
+    color: var(--text-color-body);
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content-inner.flex {
+    gap: 30px;
+    text-align: left;
+}
+.banner-heading.flex {
+    gap: 10px;
+    text-align: left;
+}
+
+.banner-image {
+    aspect-ratio: 22/9;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Swiper */
+
+/* icons-with-text */
+.icons-section-wrapper {
+    background-color: var(--background-color-secondary);
+    position: relative;
+    padding: 20px 0px;
+    top: -50px;
+}
+
+ul.icons-with-text--menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.icons-image {
+    display: flex;
+    justify-content: center;
+}
+
+li.icons-with-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
