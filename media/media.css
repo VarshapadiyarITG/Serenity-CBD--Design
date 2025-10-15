@@ -1,0 +1,130 @@
+/* header */
+@media (max-width:1450px) {
+    .grid-col-2-tablet .grid-items {
+        max-width: calc(50% - 0px);
+        width: calc(50% - 0px);
+    }
+
+    .grid-col-4-desktop.grid.grid-col-2-tablet {
+        gap: 20px 0px;
+    }
+}
+
+@media (max-width: 1324px) {
+    .page-width {
+        padding: 0px 140px;
+    }
+}
+
+@media (max-width: 1278px) {
+    .page-width {
+        padding: 0px 130px;
+    }
+}
+
+@media (max-width: 1135px) {
+    ul.list-menu--inline {
+        display: none;
+    }
+
+    .drawer {
+        display: block;
+    }
+
+    .header.header-inner-grid {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header-heading-logo {
+        justify-content: center;
+    }
+
+    .banner-main-heading h3 {
+        font-size: 32px;
+    }
+
+    .grid-col-3-tablet .grid-items {
+        max-width: calc(33.3% - 0px);
+        width: calc(33.3% - 0px);
+    }
+
+    ul.grid-col-6-desktop.grid.grid-col-3-tablet {
+        gap: 20px 0px;
+    }
+
+    .disclamer-wrapper-inner.flex {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .disclamer-container.flex {
+        gap: 10px;
+        align-items: center;
+    }
+
+    ul.disclamer-menu.flex {
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+/* banner */
+@media (max-width:1141px) {
+    .banner-image {
+        aspect-ratio: 1/0.5;
+    }
+}
+
+@media (max-width:1067px) {
+    button.primary-button.text-style {
+        width: 130px;
+        height: 44px;
+    }
+}
+
+@media (max-width:625px) {
+    .banner-image {
+        aspect-ratio: 1/0.7;
+    }
+}
+
+/* @media (max-width:949px) {
+    .grid-col-1-tablet .grid-items {
+        max-width: calc(100% - 30px);
+        width: calc(100% - 30px);
+
+    }
+
+} */
+
+@media (max-width: 879px) {
+    .banner-main-heading h3 {
+        font-size: 26px;
+        max-width: 300px;
+    }
+
+    .grid-col-2-tablet .grid-items {
+        max-width: calc(50% - 0px);
+        width: calc(50% - 0px);
+    }
+
+    ul.grid-col-6-desktop.grid.grid-col-3-tablet {
+        gap: 20px 0px;
+    }
+
+    ul.grid-col-4-desktop.grid.grid-col-2-tablet.grid-col-1-tablet {
+        gap: 20px 0px;
+    }
+}
+
+@media (max-width: 585px) {
+    .grid-col-1-tablet .grid-items {
+        max-width: calc(100% - 0px);
+        width: calc(100% - 0px);
+    }
+
+   
+}
