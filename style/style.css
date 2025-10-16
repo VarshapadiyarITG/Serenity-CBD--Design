@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: "Americana Font";
-    src: url("/asstes/Americana Font Regular/Americana Font Regular.otf");
+    src: url("../asstes/Americana Font Regular/Americana Font Regular.otf");
 }
 
 body {
