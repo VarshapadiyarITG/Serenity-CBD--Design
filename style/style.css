@@ -692,11 +692,11 @@ ul.disclamer-menu--inner {
 .hero-section-image-inner {
     aspect-ratio: 22/9;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     overflow: hidden;
-    max-height: 600px;
     width: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 /* rich-text */
