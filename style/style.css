@@ -205,6 +205,10 @@ h6,
     color: #092327;
     text-decoration: underline;
 }
+.disclamer-text :hover a span {
+    color: #092327;
+    text-decoration: underline;
+}
 
 .secondary-button {
     font-family: var(--font-body-family);
