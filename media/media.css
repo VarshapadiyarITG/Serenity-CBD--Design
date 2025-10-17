@@ -109,7 +109,6 @@
 
  @media (max-width: 990px) {
 
-
      .page-width {
          padding: 0px 20px;
      }
@@ -121,6 +120,11 @@
      .grid-col-2-tablet-footer .grid-items {
          max-width: calc(50% - 0px);
          width: calc(50% - 0px);
+     }
+
+     .grid-col-3-tablet-icons .grid-items {
+         max-width: calc(33% - 0px);
+         width: calc(33% - 0px);
      }
 
      .image-section-overall {
