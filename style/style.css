@@ -197,14 +197,14 @@ h6,
 }
 
 .button-underline:hover {
-    color: #4f6367;
-    /* border-bottom: 1px solid #4f6367; */
+    color: #06402B;
 }
 
 .footer-menu--inner :hover a {
     color: #092327;
     text-decoration: underline;
 }
+
 .disclamer-text :hover a span {
     color: #092327;
     text-decoration: underline;
