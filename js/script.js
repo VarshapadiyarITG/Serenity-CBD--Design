@@ -56,3 +56,10 @@ var swiper = new Swiper(".swiper-product", {
     prevEl: ".swiper-button-previous",
   },
 });
+
+var swiper = new Swiper(".customer-reveiw", {
+  navigation: {
+    nextEl: ".swiper-button-next-custom",
+    prevEl: ".swiper-button-prev-custom",
+  },
+});

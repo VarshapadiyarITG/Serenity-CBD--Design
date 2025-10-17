@@ -2,286 +2,250 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Swiper demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- Demo styles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
     <style>
-        html,
-        body {
-            position: relative;
-            height: 100%;
-        }
-
-        body {
-            background: #000;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #444;
+        .image-container {
+            width: 45%;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: row;
         }
 
-        .swiper-slide img {
-            display: block;
+        .image-with-text-content {
+            width: 45%;
+        }
+
+        .image-with-text-inner.flex {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .back-image{
+            aspect-ratio: 3/4;
             width: 100%;
             height: 100%;
+            display: block;
             object-fit: cover;
+            object-position: center;
+            /* max-width: 310px;
+            max-height: 440px; */
+        }
+
+        .front-image {
+            aspect-ratio: 3/4;
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+            /* max-width: 310px; */
+            /* max-height: 440px; */
         }
     </style>
 </head>
 
 <body>
-    <!-- Swiper -->
-    <div class="swiper customer-reveiw">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <li class="grid-items testimonial-list flex">
+    <section>
+        <div class="image-with-text-wrapper">
+            <div class="page-width">
+                <div class="image-with-text-inner flex">
+                  <div class="grid-items">
+                            <div class="image-with-image">
+                                <div class="back-image">
+                                    <a href="#"><span><img src="asstes/back-image.png" alt="back-image" width="100%"
+                                                height="100%"
+                                                style="display: block; object-fit: cover; object-position: center;"></span></a>
 
-                    <div class="customer-review-container flex">
-                        <div>
-                            <p class="text-style"><span style="color: rgba(38, 163, 219, 1); font-weight: 700;">CUSTOMER
-                                    REVIEWS
-                                </span></p>
-                        </div>
-                        <div class="star-rating-wrapper">
-                            <div class="star-rating-inner">
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                            </div>
+                                </div>
+                                <div class="front-image">
+                                    <a href="#"><span><img src="asstes/front-image.png" alt="front-image" width="100%"
+                                                height="100%"
+                                                style="display: block; object-fit: cover; object-position: center;"></span></a>
 
-                        </div>
-                        <div class="customer-review-content">
-                            <h5><span>Love this! I suffer from allergies that often result in hives; after
-                                    applying the balm any itching and irritation quickly dissipate. The
-                                    packaging of this product is also a beautiful bonus.</span></h5>
-                        </div>
-                        <div>
-                            <p class="text-style" style="color: black; font-size: 14px;"><span>— Kelley, <span
-                                        style="color: gray;">January 10, 2020</span></span></p>
-                        </div>
-                        <div class="arrows">
-                            <div class="left-arrow flex swiper-button-previous"><span><svg width="30px" height="30px"
-                                        viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.5 18.5L9.5 12.5L15.5 6.5" stroke="#000917" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="right-arrow flex swiper-button-second"><span><svg width="30px" height="30px"
-                                        viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.5 18.5L15.5 12.5L9.5 6.5" stroke="#000917" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg></span>
+                                </div>
                             </div>
                         </div>
+                    <div class="image-with-text-content">
+                        <div class="image-with-text-content-inner">
+                            <div class="image-with-text-heading">
+                                <h3><span>Wellness Without Worries</span></h3>
+                            </div>
+                            <div class="text-style">
+                                <p class="para"><span>We believe in transparency, which is why we want you
+                                        to
+                                        know
+                                        exactly what goes
+                                        into
+                                        our products. We source our organic hemp from Iverson Family Farms
+                                        and
+                                        use a
+                                        CO2
+                                        extraction method to ensure that our ...</span></p>
+                            </div>
+                            <div class="image-with-text-right-icon">
+                                <div class="image-with-text-right-icon--inner flex">
+                                    <div class="right-click"><a href="#"><span><svg width="21" height="19"
+                                                    viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
+                                                        fill="#7ABB42" />
+                                                    <path
+                                                        d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
+                                                        fill="#7ABB42" />
+                                                </svg>
+                                            </span></a>
+                                    </div>
+                                    <div>
+                                        <p><span>Feel Better, or it’s Free!  100% Money-Back
+                                                Guarantee</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="image-with-text-right-icon--inner flex">
+                                    <div class="right-click"><a href="#"><span><svg width="21" height="19"
+                                                    viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
+                                                        fill="#7ABB42" />
+                                                    <path
+                                                        d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
+                                                        fill="#7ABB42" />
+                                                </svg>
+                                            </span></a>
+                                    </div>
+                                    <div>
+                                        <p><span>USDA Organic, Family-farmed Oregonian hemp</span></p>
+                                    </div>
+                                </div>
+                                <div class="image-with-text-right-icon--inner flex">
+                                    <div class="right-click"><a href="#"><span><svg width="21" height="19"
+                                                    viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
+                                                        fill="#7ABB42" />
+                                                    <path
+                                                        d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
+                                                        fill="#7ABB42" />
+                                                </svg>
+                                            </span></a>
+                                    </div>
+                                    <div>
+                                        <p><span>Made with LOVE, not greed</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                </li>
-            </div>
-            <div class="swiper-slide">
-                <li class="grid-items testimonial-list flex">
-
-                    <div class="customer-review-container flex">
-                        <div>
-                            <p class="text-style"><span style="color: rgba(38, 163, 219, 1); font-weight: 700;">CUSTOMER
-                                    REVIEWS
-                                </span></p>
-                        </div>
-                        <div class="star-rating-wrapper">
-                            <div class="star-rating-inner">
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                            </div>
-
-                        </div>
-                        <div class="customer-review-content">
-                            <h5><span>Love this! I suffer from allergies that often result in hives; after
-                                    applying the balm any itching and irritation quickly dissipate. The
-                                    packaging of this product is also a beautiful bonus.</span></h5>
-                        </div>
-                        <div>
-                            <p class="text-style" style="color: black; font-size: 14px;"><span>— Kelley, <span
-                                        style="color: gray;">January 10, 2020</span></span></p>
-                        </div>
-                        <div class="arrows">
-                            <div class="left-arrow flex swiper-button-previous"><span><svg width="30px" height="30px"
-                                        viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.5 18.5L9.5 12.5L15.5 6.5" stroke="#000917" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="right-arrow flex swiper-button-second"><span><svg width="30px" height="30px"
-                                        viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.5 18.5L15.5 12.5L9.5 6.5" stroke="#000917" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg></span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </div>
-            <div class="swiper-slide">
-                <li class="grid-items testimonial-list flex">
-
-                    <div class="customer-review-container flex">
-                        <div>
-                            <p class="text-style"><span style="color: rgba(38, 163, 219, 1); font-weight: 700;">CUSTOMER
-                                    REVIEWS
-                                </span></p>
-                        </div>
-                        <div class="star-rating-wrapper">
-                            <div class="star-rating-inner">
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                                <a href="#"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 0.169922L10.472 5.17792L16 5.98592L12 9.88192L12.944 15.3859L8 12.7859L3.056 15.3859L4 9.88192L0 5.98592L5.528 5.17792L8 0.169922Z"
-                                                fill="#000309" />
-                                        </svg></span></a>
-                            </div>
-
-                        </div>
-                        <div class="customer-review-content">
-                            <h5><span>Love this! I suffer from allergies that often result in hives; after
-                                    applying the balm any itching and irritation quickly dissipate. The
-                                    packaging of this product is also a beautiful bonus.</span></h5>
-                        </div>
-                        <div>
-                            <p class="text-style" style="color: black; font-size: 14px;"><span>— Kelley, <span
-                                        style="color: gray;">January 10, 2020</span></span></p>
-                        </div>
-                        <div class="arrows">
-                            <div class="left-arrow flex swiper-button-previous"><span><svg width="30px" height="30px"
-                                        viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15.5 18.5L9.5 12.5L15.5 6.5" stroke="#000917" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="right-arrow flex swiper-button-second"><span><svg width="30px" height="30px"
-                                        viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.5 18.5L15.5 12.5L9.5 6.5" stroke="#000917" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg></span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                </div>
             </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
+    </section>
+    <section>
+        <div class="image-with-text-wrapper">
+            <div class="page-width">
+                <div class="image-with-text-wrapper-inner padding-top-bottom">
+                    <div class="grid grid-col-2-desktop ">
+                        <div class="grid-items">
+                            <div class="image-with-image">
+                                <div class="back-image">
+                                    <a href="#"><span><img src="asstes/back-image.png" alt="back-image" width="100%"
+                                                height="100%"
+                                                style="display: block; object-fit: cover; object-position: center;"></span></a>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                                </div>
+                                <div class="front-image">
+                                    <a href="#"><span><img src="asstes/front-image.png" alt="front-image" width="100%"
+                                                height="100%"
+                                                style="display: block; object-fit: cover; object-position: center;"></span></a>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".customer-reveiw", {
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-items content-overlay flex">
+                            <div class="image-with-text-content flex">
+                                <div class="image-with-text-content-inner">
+                                    <div class="image-with-text-heading">
+                                        <h3><span>Wellness Without Worries</span></h3>
+                                    </div>
+                                    <div class="text-style">
+                                        <p class="para"><span>We believe in transparency, which is why we want you
+                                                to
+                                                know
+                                                exactly what goes
+                                                into
+                                                our products. We source our organic hemp from Iverson Family Farms
+                                                and
+                                                use a
+                                                CO2
+                                                extraction method to ensure that our ...</span></p>
+                                    </div>
+                                    <div class="image-with-text-right-icon">
+                                        <div class="image-with-text-right-icon--inner flex">
+                                            <div class="right-click"><a href="#"><span><svg width="21" height="19"
+                                                            viewBox="0 0 21 19" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
+                                                                fill="#7ABB42" />
+                                                            <path
+                                                                d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
+                                                                fill="#7ABB42" />
+                                                        </svg>
+                                                    </span></a>
+                                            </div>
+                                            <div>
+                                                <p><span>Feel Better, or it’s Free!  100% Money-Back
+                                                        Guarantee</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="image-with-text-right-icon--inner flex">
+                                            <div class="right-click"><a href="#"><span><svg width="21" height="19"
+                                                            viewBox="0 0 21 19" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
+                                                                fill="#7ABB42" />
+                                                            <path
+                                                                d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
+                                                                fill="#7ABB42" />
+                                                        </svg>
+                                                    </span></a>
+                                            </div>
+                                            <div>
+                                                <p><span>USDA Organic, Family-farmed Oregonian hemp</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="image-with-text-right-icon--inner flex">
+                                            <div class="right-click"><a href="#"><span><svg width="21" height="19"
+                                                            viewBox="0 0 21 19" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
+                                                                fill="#7ABB42" />
+                                                            <path
+                                                                d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
+                                                                fill="#7ABB42" />
+                                                        </svg>
+                                                    </span></a>
+                                            </div>
+                                            <div>
+                                                <p><span>Made with LOVE, not greed</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 </body>
 
 </html>

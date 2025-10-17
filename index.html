@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serenity CBD</title>
     <link rel="stylesheet" href="./style/style.css">
-    <!-- <link rel="stylesheet" href="./media/media.css"> -->
+    <link rel="stylesheet" href="./media/media.css">
     <link rel="stylesheet" href="./style/swiper.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Font-Family cdn -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -44,24 +41,24 @@
                         <nav class="header-menu">
                             <ul class="list-menu--inline">
                                 <li class="list-items">
-                                    <div class="header-menu-items text-middle"><a href="#">Learn</a></div>
+                                    <span class="header-menu-items text-middle"><a href="#">Learn</a></span>
                                 </li>
                                 <li class="list-items">
-                                    <div class="header-menu-items text-middle"><a href="#">Shop</a></div>
+                                    <span class="header-menu-items text-middle"><a href="#">Shop</a></span>
                                 </li>
                                 <li class="list-items">
-                                    <div class="header-menu-items text-middle"><a href="#">Blog</a></div>
+                                    <span class="header-menu-items text-middle"><a href="#">Blog</a></span>
                                 </li>
                                 <li class="list-items">
-                                    <div class="header-menu-items text-middle"><a href="#">Connect</a></div>
+                                    <span class="header-menu-items text-middle"><a href="#">Connect</a></span>
                                 </li>
                                 <li class="list-items">
-                                    <div class="header-menu-items text-middle"><a href="#">My
-                                            Account </a></div>
+                                    <span class="header-menu-items text-middle"><a href="#">My
+                                            Account </a></span>
                                 </li>
                                 <li class="list-items">
-                                    <div class="header-menu-items text-middle"><a href="#">Store
-                                            Locator </a></div>
+                                    <span class="header-menu-items text-middle"><a href="#">Store
+                                            Locator </a></span>
                                 </li>
                             </ul>
                         </nav>
@@ -216,7 +213,7 @@
         <div class="icons-section-wrapper">
             <div class="page-width">
                 <div class="icons-with-text-inner">
-                    <ul class="grid-col-6-desktop grid grid-col-3-tablet grid-col-2-tablet grid-col-1-tablet">
+                    <ul class="grid-col-6-desktop grid grid-col-3-tablet grid-col-2-tablet-icons grid-col-1-tablet">
                         <li class="icons-with-text-list grid-items">
                             <div class="icons-image">
                                 <img src="asstes/Gluten & Allergan free.png" alt="Gluten & Allergan free">
@@ -755,25 +752,20 @@
         <div class="image-with-text-wrapper">
             <div class="page-width">
                 <div class="image-with-text-wrapper-inner padding-top-bottom">
-                    <div class="grid grid-col-2-desktop ">
-                        <div class="grid-items">
-                            <div class="image-with-image">
-                                <div class="back-image">
-                                    <a href="#"><span><img src="asstes/back-image.png" alt="back-image" width="100%"
-                                                height="100%"
-                                                style="display: block; object-fit: cover; object-position: center;"></span></a>
+                    <div class="image-section-overall">
+                        <div class="image-with-image">
+                            <div class="back-image">
+                                <a href="#"><span><img src="asstes/image-with-text-bsck-image.png" alt="back-image"
+                                            width="100%" height="100%"></span></a>
 
-                                </div>
-                                <div class="front-image">
-                                    <a href="#"><span><img src="asstes/front-image.png" alt="front-image" width="100%"
-                                                height="100%"
-                                                style="display: block; object-fit: cover; object-position: center;"></span></a>
+                            </div>
+                            <div class="front-image">
+                                <a href="#"><span><img src="asstes/image-with-text-front-image.png" alt="front-image"
+                                            width="100%" height="100%"></span></a>
 
-                                </div>
                             </div>
                         </div>
-
-                        <div class="grid-items content-overlay flex">
+                        <div class=" content-overlay flex">
                             <div class="image-with-text-content flex">
                                 <div class="image-with-text-content-inner">
                                     <div class="image-with-text-heading">
@@ -791,7 +783,7 @@
                                                 CO2
                                                 extraction method to ensure that our ...</span></p>
                                     </div>
-                                    <div class="image-with-text-right-icon flex">
+                                    <div class="image-with-text-right-icon">
                                         <div class="image-with-text-right-icon--inner flex">
                                             <div class="right-click"><a href="#"><span><svg width="21" height="19"
                                                             viewBox="0 0 21 19" fill="none"
@@ -846,6 +838,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div><button class="primary-button">Try It Out</button></div>
                                 </div>
                             </div>
                         </div>
@@ -853,7 +846,7 @@
                 </div>
             </div>
         </div>
-        </div>
+
     </section>
     <!-- hero-section -->
     <section>
@@ -900,12 +893,110 @@
             </div>
         </div>
     </section>
+    <!-- scrolling-image -->
+    <section>
+        <div class="scrolling-section-wrapper testimonial-section-wrapper">
+            <div class="page-width">
+                <div class="scrolling-section-inner-container  padding-top-bottom">
+                    <div class="scrolling-image flex">
+                        <div class="scrolling-media">
+                            <img src="asstes/scrolling-image.png" alt="scrolling-image" width="100%" height="100%">
+                        </div>
+                        <div class="scrolling-media">
+                            <img src="asstes/scrolling-image-02.png" alt="scrolling-image" width="100%" height="100%">
+                        </div>
+                        <div class="scrolling-media">
+                            <img src="asstes/scrolling-image-03.png" alt="scrolling-image" width="100%" height="100%">
+                        </div>
+                    </div>
+                    <div class="scrolling-meadia-text-container padding-top-bottom">
+                        <div class="content-overlay-scrolling flex">
+                            <div class="image-with-text-content flex">
+                                <div class="image-with-text-content-inner calculate-width">
+                                    <div>
+                                        <p class="text-style"><span
+                                                style="color: rgba(38, 163, 219, 1); font-weight: 700;">THE BENEFITS
+                                            </span></p>
+                                    </div>
+                                    <div class="image-with-text-heading">
+                                        <h3><span>Feel Better. Do More. Be Free.</span></h3>
+                                    </div>
+                                    <div class="text-style">
+                                        <p class="para"><span>Our products are a representation of the core belief that
+                                                nature has provided all living creatures with the means to thrive and
+                                                live healthy, meaningful lives.</span></p>
+                                    </div>
+                                    <div class="image-with-text-right-icon flex">
+                                        <div class="image-with-text-right-icon--inner flex">
+                                            <div class="right-click"><a href="#"><span><svg width="21" height="19"
+                                                            viewBox="0 0 21 19" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
+                                                                fill="#7ABB42" />
+                                                            <path
+                                                                d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
+                                                                fill="#7ABB42" />
+                                                        </svg>
+                                                    </span></a>
+                                            </div>
+                                            <div>
+                                                <p><span>Find your Zen.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="image-with-text-right-icon--inner flex">
+                                            <div class="right-click"><a href="#"><span><svg width="21" height="19"
+                                                            viewBox="0 0 21 19" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
+                                                                fill="#7ABB42" />
+                                                            <path
+                                                                d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
+                                                                fill="#7ABB42" />
+                                                        </svg>
+                                                    </span></a>
+                                            </div>
+                                            <div>
+                                                <p><span>Ease your aches.</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="image-with-text-right-icon--inner flex">
+                                            <div class="right-click"><a href="#"><span><svg width="21" height="19"
+                                                            viewBox="0 0 21 19" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
+                                                                fill="#7ABB42" />
+                                                            <path
+                                                                d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
+                                                                fill="#7ABB42" />
+                                                        </svg>
+                                                    </span></a>
+                                            </div>
+                                            <div>
+                                                <p><span>Savor your sleep.</span></p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="primary-button">Shop Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- left-image-with-text -->
     <section>
         <div class="right-image-with-text-wrapper">
             <div class="page-width">
                 <div class="padding-top-bottom">
-                    <ul class="grid-col-2-desktop grid flex image-overlay">
+                    <ul class="grid-col-2-desktop grid flex image-overlay grid-col-1-tablet-image">
                         <li class="grid-items text-overlay flex">
                             <div class="right-image-content flex">
                                 <div>
@@ -942,8 +1033,8 @@
     <section>
         <div class="testimonial-section-wrapper">
             <div class="page-width">
-                <div class="testimonial-section-wrapper-inner">
-                    <div class="grid grid-col-2-desktop textimonial-overlay flex">
+                <div class="testimonial-section-wrapper-inner padding-top-bottom">
+                    <div class="grid grid-col-2-desktop textimonial-overlay flex grid-col-1-tablet-image">
                         <div class="grid-items">
                             <div class="swiper customer-reveiw">
                                 <div class="swiper-wrapper">
@@ -1200,7 +1291,8 @@
                             <h3><span>Insights and Updates</span></h3>
                         </div>
                     </div>
-                    <ul class="grid grid-col-3-desktop flex blogs-overlay">
+                    <ul
+                        class="grid grid-col-3-desktop grid-col-2-tablet-blogs flex blogs-overlay grid-col-1-tablet-image">
                         <li class="grid-items">
                             <div class="blogs-container-inner flex">
                                 <div class="blogs-image"><img src="asstes/blogs-01.png" alt="blogs-image" width="100%"
@@ -1286,7 +1378,7 @@
                         <h4><span>@serenitywholebeing</span></h4>
                     </div>
                 </div>
-                <ul class="grid grid-col-5-desktop flex ">
+                <ul class="grid grid-col-5-desktop flex grid-col-3-tablet-insta-feed grid-col-2-tablet-icons">
                     <li class="grid-items">
                         <div class="insta-feed-image">
                             <img src="asstes/insta-feed-01.png" alt="insta-feed-image" width="100%" height="100%">
@@ -1343,7 +1435,7 @@
         <div class="footer-icons-section-wrapper">
             <div class="page-width">
                 <div class="icons-with-text-inner">
-                    <ul class="grid-col-4-desktop grid grid-col-2-tablet grid-col-1-tablet">
+                    <ul class="grid-col-4-desktop grid grid-col-2-tablet-icons grid-col-1-tablet">
                         <li class="icons-with-text-list grid-items">
                             <div class="icons-image">
                                 <img src="asstes/free-shipping.svg" alt="Free Shipping">
@@ -1386,7 +1478,7 @@
         <div class="footer-wrapper">
             <div class="page-width">
                 <div class="footer-wrapper-inner padding-top-bottom">
-                    <div class="grid-col-4-desktop grid grid-col-2-tablet">
+                    <div class="grid-col-4-desktop grid grid-col-2-tablet-footer grid-col-1-tablet-footer">
                         <ul class="grid-items footer-menu flex">
                             <li>
                                 <p class="width-set"><span class="text-style">As more and more people turn to natural
@@ -1637,15 +1729,6 @@
     <script src="js/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper(".customer-reveiw", {
-            navigation: {
-                nextEl: ".swiper-button-next-custom",
-                prevEl: ".swiper-button-prev-custom",
-            },
-        });
-    </script>
 </body>
 
 </html>
