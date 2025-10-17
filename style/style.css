@@ -198,7 +198,7 @@ h6,
 
 .button-underline:hover {
     color: #4f6367;
-    border-bottom: 1px solid #4f6367;
+    /* border-bottom: 1px solid #4f6367; */
 }
 
 .footer-menu--inner :hover a {
@@ -240,7 +240,9 @@ h6,
     text-transform: capitalize;
     opacity: 1;
     padding: 8px 18px;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
+    text-decoration: underline;
+    text-underline-offset: 5px;
     background-color: transparent;
 }
 
