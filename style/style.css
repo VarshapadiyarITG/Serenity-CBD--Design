@@ -193,7 +193,17 @@ h6,
 
 .secondary-button:hover {
     background-color: rgb(160, 217, 239);
-     transform: 0.3s ease;
+    transform: 0.3s ease;
+}
+
+.button-underline:hover {
+    color: #4f6367;
+    border-bottom: 1px solid #4f6367;
+}
+
+.footer-menu--inner :hover a {
+    color: #092327;
+    text-decoration: underline;
 }
 
 .secondary-button {
