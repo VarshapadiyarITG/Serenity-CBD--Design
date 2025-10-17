@@ -186,6 +186,16 @@ h6,
     background-color: var(--background-color-primary);
 }
 
+.primary-button:hover {
+    background-color: #427aa1;
+    transform: 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: rgb(160, 217, 239);
+     transform: 0.3s ease;
+}
+
 .secondary-button {
     font-family: var(--font-body-family);
     font-weight: var(--font-weight-btn);
