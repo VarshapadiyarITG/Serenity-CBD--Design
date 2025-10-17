@@ -275,12 +275,18 @@
          width: calc(100% - 0px);
      }
 
-     .hero-section-content  {
+     .hero-section-content {
          position: unset;
          color: black;
      }
-     .hero-section-content p{
-        color: black;
+
+     .hero-section-content p {
+         color: black;
+     }
+
+     .product-card-container {
+         display: flex;
+         align-items: center;
      }
 
  }
