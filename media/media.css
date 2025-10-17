@@ -295,3 +295,9 @@
      }
 
  }
+
+ @media (max-width:450px) {
+     .banner-image {
+         aspect-ratio: 3/4;
+     }
+ }
