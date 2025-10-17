@@ -671,6 +671,7 @@ ul.disclamer-menu--inner {
 /* hero-section */
 .hero-section-image {
     position: relative;
+    width: 100%;
 }
 
 .hero-section-wrapper {
@@ -694,6 +695,9 @@ ul.disclamer-menu--inner {
     display: block;
     object-fit: contain;
     overflow: hidden;
+    max-height: 600px;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* rich-text */
@@ -744,6 +748,8 @@ li.grid-items.text-overlay.flex {
 .insta-feed-wrapper {
     background-color: var(--background-color-secondary);
     padding: 80px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .insta-feed-inner.flex {

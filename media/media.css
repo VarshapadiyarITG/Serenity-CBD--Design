@@ -228,7 +228,6 @@
      }
 
      .scrolling-image {
-         flex-direction: row;
          gap: 10px;
          width: 100%;
      }
@@ -264,6 +263,8 @@
 
      .image-with-image {
          gap: 10px;
+         flex-direction: column;
+         justify-content: center;
      }
 
      .banner-content-inner {
