@@ -20,6 +20,10 @@ body {
     font-family: var(--font-family-body);
 }
 
+img {
+    cursor: pointer;
+}
+
 /* page-width */
 .page-width {
     padding: 0px 130px;

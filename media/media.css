@@ -297,6 +297,10 @@
      .hero-section-content {
          padding: 20px;
      }
+
+     .header-icons-inner {
+         gap: 7px;
+     }
  }
 
  @media (max-width:450px) {
