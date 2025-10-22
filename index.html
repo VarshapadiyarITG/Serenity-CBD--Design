@@ -14,9 +14,234 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    body {
+        position: relative;
+
+    }
+
+    .main-container {
+        text-align: center;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        max-width: 600px;
+        width: 100%;
+        margin: 20px auto;
+        position: absolute;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    .btn {
+        font-family: 'Americana Font';
+        padding: 10px 18px;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 100;
+        color: white;
+        background: var(--background-color-primary);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .main-container-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button-popup {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input#user-age {
+        border-radius: 10px;
+        border: none;
+        background: transparent;
+        outline: 1px solid #7a9e9f;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .header-heading-logo {
+        aspect-ratio: 2.06/1;
+        max-width: 240px;
+        max-height: 110px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ::placeholder {
+        font-family: 'NunitoSans';
+        font-size: 18px;
+    }
+
+    h3.user-heading {
+        font-size: 30px;
+    }
+
+    input:focus {
+        border-color: var(--background-color-primary);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 0 3px rgba(74, 0, 224, 0.1);
+        outline: none;
+    }
+
+    form#formbox {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-container-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+    }
+
+    .card-content {
+        background-color: white;
+        margin: 10% auto;
+        padding: 30px;
+        border-radius: 20px;
+        width: 90%;
+        max-width: 500px;
+        position: relative;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    .cancel {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        font-size: 30px;
+        font-weight: 300;
+        color: #2e4052;
+        cursor: pointer;
+        transition: color 0.2s;
+        transition: transform .7s ease-in-out;
+    }
+
+    .cancel:hover {
+        transform: rotate(360deg);
+    }
+
+    .popup-overlay {
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 12;
+
+    }
+
+    .main-container {
+        display: none;
+    }
+
+    #welcomePage {
+        display: none;
+    }
+
+    .background {
+        backdrop-filter: blur(2px);
+    }
+
+    .main-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
 
 <body>
+    <!-- popup -->
+    <section>
+        <div id="popupOverlay" class="popup-overlay">
+            <div class="main-container">
+                <div class="main-container-inner">
+                    <h1 class="header-heading">
+                        <div class="header-heading-logo">
+                            <a href="#"><img src="asstes/logo-image.png" alt="logo" width="100%" height="100%"></a>
+                        </div>
+                    </h1>
+                    <form action="#" id="formbox">
+                        <h3 class="user-heading">Enter Your Age</h3>
+                        <input type="number" id="user-age" placeholder="Enter Your Age" required name="user-age">
+
+                        <div class="button-popup">
+                            <button id="submit" class="btn" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="welcomePage" class="card">
+                <div class="card-content main-container-inner">
+                    <h1 class="header-heading">
+                        <div class="header-heading-logo">
+                            <a href="#"><img src="asstes/logo-image.png" alt="logo" width="100%" height="100%"></a>
+                        </div>
+                    </h1>
+                    <h3 class="user-heading">Welcome to our website</h3>
+                </div>
+            </div>
+            <div id="notvalid" class="card">
+                <div class="card-content">
+                    <h1 class="header-heading">
+                        <div class="header-heading-logo">
+                            <a href="#"><img src="asstes/logo-image.png" alt="logo" width="100%" height="100%"></a>
+                        </div>
+                    </h1>
+                    <h3 class="user-heading">You are not valid</h3>
+                </div>
+            </div>
+            <div id="eligible" class="card">
+                <div class="card-content main-inner">
+                    <h1 class="header-heading">
+                        <div class="header-heading-logo">
+                            <a href="#"><img src="asstes/logo-image.png" alt="logo" width="100%" height="100%"></a>
+                        </div>
+                    </h1>
+                    <h3 class="user-heading">You are not eligible</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- popup-close -->
     <!-- Announcement-bar -->
+
     <div class="announcement-bar-wrapper">
         <div class="page-width">
             <div class="announcement-bar-inner">
@@ -455,7 +680,8 @@
                                                     </div>
                                                     <div class="hover-show-button">
                                                         <div class="hover-button-show-inner">
-                                                            <button class="solid-button text-style">Quick Buy</button>
+                                                            <button class="solid-button text-style">Quick
+                                                                Buy</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -467,7 +693,8 @@
                                                         <a href="#">$25.00 – $50.00 </a>
                                                     </h4>
                                                     <h4 class="text-middle"><span
-                                                            class="price-content">or from $20.00 – $40.00 / month</span>
+                                                            class="price-content">or from $20.00 – $40.00 /
+                                                            month</span>
                                                     </h4>
                                                 </div>
                                             </div>
@@ -507,13 +734,15 @@
                                                     </div>
                                                     <div class="hover-show-button">
                                                         <div class="hover-button-show-inner">
-                                                            <button class="solid-button text-style">Quick Buy</button>
+                                                            <button class="solid-button text-style">Quick
+                                                                Buy</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="product-card-content flex">
-                                                <h3 class="text-middle"><span>Classic Serenity CBD Body Oil</span></h3>
+                                                <h3 class="text-middle"><span>Classic Serenity CBD Body Oil</span>
+                                                </h3>
                                                 <div class="product-card-price flex">
                                                     <h4 class="text-middle">
                                                         <a href="#">$45.00</a>
@@ -560,7 +789,8 @@
                                                     </div>
                                                     <div class="hover-show-button">
                                                         <div class="hover-button-show-inner">
-                                                            <button class="solid-button text-style">Quick Buy</button>
+                                                            <button class="solid-button text-style">Quick
+                                                                Buy</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -614,13 +844,15 @@
                                                     </div>
                                                     <div class="hover-show-button">
                                                         <div class="hover-button-show-inner">
-                                                            <button class="solid-button text-style">Quick Buy</button>
+                                                            <button class="solid-button text-style">Quick
+                                                                Buy</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="product-card-content flex">
-                                                <h3 class="text-middle"><span>Serenity CBD Bedtime Gummies</span></h3>
+                                                <h3 class="text-middle"><span>Serenity CBD Bedtime Gummies</span>
+                                                </h3>
                                                 <div class="product-card-price flex">
                                                     <h4 class="text-middle">
                                                         <a href="#">$25.00 – $55.00
@@ -667,7 +899,8 @@
                                                     </div>
                                                     <div class="hover-show-button">
                                                         <div class="hover-button-show-inner">
-                                                            <button class="solid-button text-style">Quick Buy</button>
+                                                            <button class="solid-button text-style">Quick
+                                                                Buy</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -719,7 +952,8 @@
                                                     </div>
                                                     <div class="hover-show-button">
                                                         <div class="hover-button-show-inner">
-                                                            <button class="solid-button text-style">Quick Buy</button>
+                                                            <button class="solid-button text-style">Quick
+                                                                Buy</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -867,7 +1101,8 @@
                     <div>
                         <p class="text-style"><span>Coming from a variety of backgrounds including yoga, holistic
                                 healing, culinary, and visual arts, as well as the renewable energy and cannabis
-                                industries, the commonality that brought our team together is a desire to heal and help
+                                industries, the commonality that brought our team together is a desire to heal and
+                                help
                                 people</span></p>
                     </div>
                     <div>
@@ -886,7 +1121,8 @@
                         <p class="text-style"><span style="color: rgba(38, 163, 219, 1);">WE ARE SERENITY</span></p>
                     </div>
                     <div class="rich-text-heading flex">
-                        <h4><span>“Our products are a representation of the core belief that nature has provided us with
+                        <h4><span>“Our products are a representation of the core belief that nature has provided us
+                                with
                                 everything we need to live healthy, meaningful lives.”</span></h4>
                     </div>
                 </div>
@@ -922,8 +1158,10 @@
                                         <h3><span>Feel Better. Do More. Be Free.</span></h3>
                                     </div>
                                     <div class="text-style">
-                                        <p class="para"><span>Our products are a representation of the core belief that
-                                                nature has provided all living creatures with the means to thrive and
+                                        <p class="para"><span>Our products are a representation of the core belief
+                                                that
+                                                nature has provided all living creatures with the means to thrive
+                                                and
                                                 live healthy, meaningful lives.</span></p>
                                     </div>
                                     <div class="image-with-text-right-icon flex">
@@ -1008,9 +1246,11 @@
                                     <h3><span>Ingredients in Serenity CBD Products</span></h3>
                                 </div>
                                 <div>
-                                    <p class="text-style"><span style="color: black;"> Aware of the need to remedy the
+                                    <p class="text-style"><span style="color: black;"> Aware of the need to remedy
+                                            the
                                             aches of body, mind, and
-                                            soul in unison, we carefully handcraft each of our topicals with Love being
+                                            soul in unison, we carefully handcraft each of our topicals with Love
+                                            being
                                             the primary ingredient. In order to give Love a little help..</span></p>
                                 </div>
                                 <div>
@@ -1088,19 +1328,23 @@
 
                                                 </div>
                                                 <div class="customer-review-content">
-                                                    <h5><span>Love this! I suffer from allergies that often result in
+                                                    <h5><span>Love this! I suffer from allergies that often result
+                                                            in
                                                             hives;
                                                             after
                                                             applying the balm any itching and irritation quickly
                                                             dissipate.
                                                             The
-                                                            packaging of this product is also a beautiful bonus.</span>
+                                                            packaging of this product is also a beautiful
+                                                            bonus.</span>
                                                     </h5>
                                                 </div>
                                                 <div>
-                                                    <p class="text-style" style="color: black; font-size: 14px;"><span>—
+                                                    <p class="text-style" style="color: black; font-size: 14px;">
+                                                        <span>—
                                                             Kelley, <span style="color: gray;">January 10,
-                                                                2020</span></span></p>
+                                                                2020</span></span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1155,19 +1399,23 @@
 
                                                 </div>
                                                 <div class="customer-review-content">
-                                                    <h5><span>Love this! I suffer from allergies that often result in
+                                                    <h5><span>Love this! I suffer from allergies that often result
+                                                            in
                                                             hives;
                                                             after
                                                             applying the balm any itching and irritation quickly
                                                             dissipate.
                                                             The
-                                                            packaging of this product is also a beautiful bonus.</span>
+                                                            packaging of this product is also a beautiful
+                                                            bonus.</span>
                                                     </h5>
                                                 </div>
                                                 <div>
-                                                    <p class="text-style" style="color: black; font-size: 14px;"><span>—
+                                                    <p class="text-style" style="color: black; font-size: 14px;">
+                                                        <span>—
                                                             Kelley, <span style="color: gray;">January 10,
-                                                                2020</span></span></p>
+                                                                2020</span></span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1222,19 +1470,23 @@
 
                                                 </div>
                                                 <div class="customer-review-content">
-                                                    <h5><span>Love this! I suffer from allergies that often result in
+                                                    <h5><span>Love this! I suffer from allergies that often result
+                                                            in
                                                             hives;
                                                             after
                                                             applying the balm any itching and irritation quickly
                                                             dissipate.
                                                             The
-                                                            packaging of this product is also a beautiful bonus.</span>
+                                                            packaging of this product is also a beautiful
+                                                            bonus.</span>
                                                     </h5>
                                                 </div>
                                                 <div>
-                                                    <p class="text-style" style="color: black; font-size: 14px;"><span>—
+                                                    <p class="text-style" style="color: black; font-size: 14px;">
+                                                        <span>—
                                                             Kelley, <span style="color: gray;">January 10,
-                                                                2020</span></span></p>
+                                                                2020</span></span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1284,7 +1536,8 @@
                 <div class="blogs-inner insta-feed-inner flex padding-top-bottom">
                     <div class="insta-heading flex">
                         <div>
-                            <p class="text-style"><span style="color: rgba(38, 163, 219, 1); font-weight: 700;">OUR BLOG
+                            <p class="text-style"><span style="color: rgba(38, 163, 219, 1); font-weight: 700;">OUR
+                                    BLOG
                                 </span></p>
                         </div>
                         <div>
@@ -1303,9 +1556,11 @@
                                                 Oils</span></h6>
                                     </div>
                                     <div class="blogs-para">
-                                        <p class="text-style"><span style="color: black;">Essential oils are known for
+                                        <p class="text-style"><span style="color: black;">Essential oils are known
+                                                for
                                                 bringing refreshing scents
-                                                into your home. If you’ve ever enjoyed the fragrance in the air while
+                                                into your home. If you’ve ever enjoyed the fragrance in the air
+                                                while
                                                 walking by a field of lavender...</span></p>
                                     </div>
                                     <div>
@@ -1325,13 +1580,16 @@
                                                 Garden</span></h6>
                                     </div>
                                     <div class="blogs-para">
-                                        <p class="text-style"><span style="color: black;">What if you could turn your
+                                        <p class="text-style"><span style="color: black;">What if you could turn
+                                                your
                                                 food
                                                 waste into the perfect fertilizer for your garden? Let’s talk about
-                                                composting and why it’s called “black gold” by gardeners...</span></p>
+                                                composting and why it’s called “black gold” by gardeners...</span>
+                                        </p>
                                     </div>
                                     <div>
-                                        <p class="text-style"><span style="color: rgba(138, 144, 153, 1);">December 24,
+                                        <p class="text-style"><span style="color: rgba(138, 144, 153, 1);">December
+                                                24,
                                                 2022</span></p>
                                     </div>
                                 </div>
@@ -1343,18 +1601,22 @@
                                         height="100%"></div>
                                 <div class="blogs-content flex">
                                     <div class="blogs-heading">
-                                        <h6><span>How a Morning Meditation Routine for Beginners Can Bring Calm to Your
+                                        <h6><span>How a Morning Meditation Routine for Beginners Can Bring Calm to
+                                                Your
                                                 Day</span></h6>
                                     </div>
                                     <div class="blogs-para">
-                                        <p class="text-style"><span style="color: black;">Waking up is hard. Our minds
+                                        <p class="text-style"><span style="color: black;">Waking up is hard. Our
+                                                minds
                                                 and
-                                                bodies are at their lowest ebb, so it’s no surprise that most of us wake
+                                                bodies are at their lowest ebb, so it’s no surprise that most of us
+                                                wake
                                                 up
                                                 grumpy—or at least not ready to face the day...</span></p>
                                     </div>
                                     <div>
-                                        <p class="text-style"><span style="color: rgba(138, 144, 153, 1);">August 30,
+                                        <p class="text-style"><span style="color: rgba(138, 144, 153, 1);">August
+                                                30,
                                                 2023</span></p>
                                     </div>
                                 </div>
@@ -1371,7 +1633,8 @@
             <div class="insta-feed-inner flex">
                 <div class="insta-heading flex">
                     <div>
-                        <p class="text-style"><span style="color: rgba(38, 163, 219, 1); font-weight: 700;">FOLLOW US
+                        <p class="text-style"><span style="color: rgba(38, 163, 219, 1); font-weight: 700;">FOLLOW
+                                US
                             </span></p>
                     </div>
                     <div>
@@ -1420,7 +1683,8 @@
                         <p class="text-style"><span style="color: black;">At Serenity CBD in Sacramento, CA, we are
                                 dedicated to providing our
                                 customers with the highest quality CBD-rich hemp extract products and exceptional
-                                customer service, which include CBD Topicals, CBD Oil Tinctures, and CBD Balms. If you
+                                customer service, which include CBD Topicals, CBD Oil Tinctures, and CBD Balms. If
+                                you
                                 have any questions or concerns, please don’t hesitate to reach out to us.</span></p>
                     </div>
                     <div class="rich-text-button">
@@ -1435,7 +1699,8 @@
         <div class="footer-icons-section-wrapper">
             <div class="page-width">
                 <div class="icons-with-text-inner">
-                    <ul class="grid-col-4-desktop grid grid-col-3-tablet-icons grid-col-2-tablet-icons grid-col-1-tablet">
+                    <ul
+                        class="grid-col-4-desktop grid grid-col-3-tablet-icons grid-col-2-tablet-icons grid-col-1-tablet">
                         <li class="icons-with-text-list grid-items">
                             <div class="icons-image">
                                 <img src="asstes/free-shipping.svg" alt="Free Shipping">
@@ -1481,7 +1746,8 @@
                     <div class="grid-col-4-desktop grid grid-col-2-tablet-footer grid-col-1-tablet-footer">
                         <ul class="grid-items footer-menu flex">
                             <li>
-                                <p class="width-set"><span class="text-style">As more and more people turn to natural
+                                <p class="width-set"><span class="text-style">As more and more people turn to
+                                        natural
                                         alternatives for
                                         their
                                         health and wellness, CBD-rich hemp extract products have become increasingly
@@ -1724,6 +1990,7 @@
             </div>
         </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
