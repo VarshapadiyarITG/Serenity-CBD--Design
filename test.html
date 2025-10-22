@@ -1,251 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="style/style.css"> -->
-    <style>
-        .image-container {
-            width: 45%;
-            display: flex;
-            flex-direction: row;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serenity Age Input Popup</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f5f7;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .image-with-text-content {
-            width: 45%;
-        }
+    /* Popup Overlay */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
 
-        .image-with-text-inner.flex {
-            display: flex;
-            flex-direction: row;
-        }
+    .popup-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
 
-        .back-image{
-            aspect-ratio: 3/4;
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-            object-position: center;
-            /* max-width: 310px;
-            max-height: 440px; */
-        }
+    /* Popup Container */
+    .popup {
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
 
-        .front-image {
-            aspect-ratio: 3/4;
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-            object-position: center;
-            /* max-width: 310px; */
-            /* max-height: 440px; */
-        }
-    </style>
+    /* Animation */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Heading */
+    .popup h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .popup p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    /* Slider */
+    .age-slider {
+      width: 100%;
+      margin-bottom: 20px;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      background: #ddd;
+      border-radius: 10px;
+      outline: none;
+      transition: background 0.3s;
+    }
+
+    .age-slider:hover {
+      background: #a1c4fd;
+    }
+
+    .age-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      background: #5c9cd2;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .age-slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #5c9cd2;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* Button */
+    .popup button {
+      background-color: #5c9cd2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .popup button:hover {
+      background-color: #3c7cb1;
+    }
+
+  </style>
 </head>
-
 <body>
-    <section>
-        <div class="image-with-text-wrapper">
-            <div class="page-width">
-                <div class="image-with-text-inner flex">
-                  <div class="grid-items">
-                            <div class="image-with-image">
-                                <div class="back-image">
-                                    <a href="#"><span><img src="asstes/back-image.png" alt="back-image" width="100%"
-                                                height="100%"
-                                                style="display: block; object-fit: cover; object-position: center;"></span></a>
 
-                                </div>
-                                <div class="front-image">
-                                    <a href="#"><span><img src="asstes/front-image.png" alt="front-image" width="100%"
-                                                height="100%"
-                                                style="display: block; object-fit: cover; object-position: center;"></span></a>
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="popup">
+      <h2>🌿 Enter Your Age 🌿</h2>
+           <!-- Age Input (Slider) -->
+      <input type="range" min="18" max="100" value="18" class="age-slider" id="age-slider">
+      <p id="age-value">Age: 18</p>
 
-                                </div>
-                            </div>
-                        </div>
-                    <div class="image-with-text-content">
-                        <div class="image-with-text-content-inner">
-                            <div class="image-with-text-heading">
-                                <h3><span>Wellness Without Worries</span></h3>
-                            </div>
-                            <div class="text-style">
-                                <p class="para"><span>We believe in transparency, which is why we want you
-                                        to
-                                        know
-                                        exactly what goes
-                                        into
-                                        our products. We source our organic hemp from Iverson Family Farms
-                                        and
-                                        use a
-                                        CO2
-                                        extraction method to ensure that our ...</span></p>
-                            </div>
-                            <div class="image-with-text-right-icon">
-                                <div class="image-with-text-right-icon--inner flex">
-                                    <div class="right-click"><a href="#"><span><svg width="21" height="19"
-                                                    viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
-                                                        fill="#7ABB42" />
-                                                    <path
-                                                        d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
-                                                        fill="#7ABB42" />
-                                                </svg>
-                                            </span></a>
-                                    </div>
-                                    <div>
-                                        <p><span>Feel Better, or it’s Free!  100% Money-Back
-                                                Guarantee</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="image-with-text-right-icon--inner flex">
-                                    <div class="right-click"><a href="#"><span><svg width="21" height="19"
-                                                    viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
-                                                        fill="#7ABB42" />
-                                                    <path
-                                                        d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
-                                                        fill="#7ABB42" />
-                                                </svg>
-                                            </span></a>
-                                    </div>
-                                    <div>
-                                        <p><span>USDA Organic, Family-farmed Oregonian hemp</span></p>
-                                    </div>
-                                </div>
-                                <div class="image-with-text-right-icon--inner flex">
-                                    <div class="right-click"><a href="#"><span><svg width="21" height="19"
-                                                    viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
-                                                        fill="#7ABB42" />
-                                                    <path
-                                                        d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
-                                                        fill="#7ABB42" />
-                                                </svg>
-                                            </span></a>
-                                    </div>
-                                    <div>
-                                        <p><span>Made with LOVE, not greed</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      <!-- Submit Button -->
+      <button onclick="submitAge()">Submit</button>
+    </div>
+  </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="image-with-text-wrapper">
-            <div class="page-width">
-                <div class="image-with-text-wrapper-inner padding-top-bottom">
-                    <div class="grid grid-col-2-desktop ">
-                        <div class="grid-items">
-                            <div class="image-with-image">
-                                <div class="back-image">
-                                    <a href="#"><span><img src="asstes/back-image.png" alt="back-image" width="100%"
-                                                height="100%"
-                                                style="display: block; object-fit: cover; object-position: center;"></span></a>
+  <script>
+    // Show the popup
+    window.onload = function() {
+      setTimeout(() => {
+        document.getElementById('popup-overlay').classList.add('show');
+      }, 1000); // Delay popup to make it feel less intrusive
+    };
 
-                                </div>
-                                <div class="front-image">
-                                    <a href="#"><span><img src="asstes/front-image.png" alt="front-image" width="100%"
-                                                height="100%"
-                                                style="display: block; object-fit: cover; object-position: center;"></span></a>
+    // Update the age display
+    const ageSlider = document.getElementById("age-slider");
+    const ageValue = document.getElementById("age-value");
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-items content-overlay flex">
-                            <div class="image-with-text-content flex">
-                                <div class="image-with-text-content-inner">
-                                    <div class="image-with-text-heading">
-                                        <h3><span>Wellness Without Worries</span></h3>
-                                    </div>
-                                    <div class="text-style">
-                                        <p class="para"><span>We believe in transparency, which is why we want you
-                                                to
-                                                know
-                                                exactly what goes
-                                                into
-                                                our products. We source our organic hemp from Iverson Family Farms
-                                                and
-                                                use a
-                                                CO2
-                                                extraction method to ensure that our ...</span></p>
-                                    </div>
-                                    <div class="image-with-text-right-icon">
-                                        <div class="image-with-text-right-icon--inner flex">
-                                            <div class="right-click"><a href="#"><span><svg width="21" height="19"
-                                                            viewBox="0 0 21 19" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
-                                                                fill="#7ABB42" />
-                                                            <path
-                                                                d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
-                                                                fill="#7ABB42" />
-                                                        </svg>
-                                                    </span></a>
-                                            </div>
-                                            <div>
-                                                <p><span>Feel Better, or it’s Free!  100% Money-Back
-                                                        Guarantee</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="image-with-text-right-icon--inner flex">
-                                            <div class="right-click"><a href="#"><span><svg width="21" height="19"
-                                                            viewBox="0 0 21 19" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
-                                                                fill="#7ABB42" />
-                                                            <path
-                                                                d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
-                                                                fill="#7ABB42" />
-                                                        </svg>
-                                                    </span></a>
-                                            </div>
-                                            <div>
-                                                <p><span>USDA Organic, Family-farmed Oregonian hemp</span></p>
-                                            </div>
-                                        </div>
-                                        <div class="image-with-text-right-icon--inner flex">
-                                            <div class="right-click"><a href="#"><span><svg width="21" height="19"
-                                                            viewBox="0 0 21 19" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M6.90391 6.38892L5.50391 7.78892L10.5039 12.7889L20.5039 2.78892L19.1039 1.38892L10.5039 9.98892L6.90391 6.38892Z"
-                                                                fill="#7ABB42" />
-                                                            <path
-                                                                d="M9.50391 16.3889C5.60391 16.3889 2.50391 13.2889 2.50391 9.38892C2.50391 5.48892 5.60391 2.38892 9.50391 2.38892C10.7039 2.38892 11.9039 2.68892 13.0039 3.28892L14.0039 1.58892C12.6039 0.788916 11.1039 0.388916 9.50391 0.388916C4.50391 0.388916 0.503906 4.38892 0.503906 9.38892C0.503906 14.3889 4.50391 18.3889 9.50391 18.3889C14.5039 18.3889 18.5039 14.3889 18.5039 9.38892H16.5039C16.5039 13.2889 13.4039 16.3889 9.50391 16.3889Z"
-                                                                fill="#7ABB42" />
-                                                        </svg>
-                                                    </span></a>
-                                            </div>
-                                            <div>
-                                                <p><span>Made with LOVE, not greed</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    ageSlider.oninput = function() {
+      ageValue.textContent = "Age: " + this.value;
+    }
 
-    </section>
+    // Submit function
+    function submitAge() {
+      const age = ageSlider.value;
+    //   alert(`You are ${age} years old! Your personalized experience is on the way.`);
+      document.getElementById('popup-overlay').classList.remove('show');
+    }
+  </script>
 </body>
-
 </html>
