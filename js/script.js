@@ -63,6 +63,7 @@ var swiper = new Swiper(".customer-reveiw", {
     prevEl: ".swiper-button-prev-custom",
   },
 });
+
 // popup
 
 let popupOverlay = document.getElementById('popupOverlay');
@@ -76,6 +77,7 @@ let cancel = document.getElementsByClassName('cancel')[0];
 let eligible = document.getElementById('eligible');
 let notvalid = document.getElementById('notvalid');
 
+// on load 
 window.addEventListener('DOMContentLoaded', () => {
   let storedAge = localStorage.getItem('user');
   if (storedAge == null) {
@@ -104,20 +106,20 @@ form.addEventListener("submit", (event) => {
     notvalid.style.display = "block";
     popup.style.display = "none";
     popupOverlay.classList.remove('background');
-  } 
+  }
   else if (age >= 1 && age < 18) {
     // Underage
     eligible.style.display = "block";
     popup.style.display = "none";
     popupOverlay.classList.remove('background');
-  } 
+  }
   else if (age >= 18 && age < 100) {
     // Valid age – store it
     localStorage.setItem('user', JSON.stringify(age));
     popup.style.display = "none";
     popupOverlay.classList.remove('background');
     welcomePage.style.display = 'block';
-    
+
     setTimeout(() => {
       welcomePage.style.display = "none";
     }, 2000);
