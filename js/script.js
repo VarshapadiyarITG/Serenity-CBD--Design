@@ -106,12 +106,20 @@ form.addEventListener("submit", (event) => {
     notvalid.style.display = "block";
     popup.style.display = "none";
     popupOverlay.classList.remove('background');
+    setTimeout(() => {
+      notvalid.style.display = "none";
+      popup.style.display = "block";
+    }, 2500);
   }
   else if (age >= 1 && age < 18) {
     // Underage
     eligible.style.display = "block";
     popup.style.display = "none";
     popupOverlay.classList.remove('background');
+    setTimeout(() => {
+      eligible.style.display = "none";
+      popup.style.display = "block";
+    }, 2000);
   }
   else if (age >= 18 && age < 100) {
     // Valid age – store it
